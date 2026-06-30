@@ -37,6 +37,9 @@ indirect_graph indirect_graph_create(int max_size) {
         free(_g);
         return NULL;
     }
+
+    _g->size = 0;
+    _g->max_size = max_size;
     return _g;
 }
 

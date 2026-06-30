@@ -42,7 +42,7 @@ int main() {
 
     // getting the value
     int value;
-    if (get_value(g, d, &value)) printf("\nNode's %d value: %d\n", d, value);
+    if (get_value(g, d, &value) == 0) printf("\nNode's %d value: %d\n", d, value);
 
 
     list neighbors = direct_graph_neighbors(g, b);

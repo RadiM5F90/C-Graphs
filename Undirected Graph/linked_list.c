@@ -206,12 +206,12 @@ iterator iterator_create(list _list) {
     iterator it = malloc(sizeof(struct _iterator));
     if (it == NULL) return NULL;
 
-    it->current = NULL;
+    it->current = _list->head;
     return it;
 }
 
 bool iterator_has_next(iterator _it) {
-    return (_it->current != NULL);
+    return (_it != NULL && _it->current != NULL);
 }
 
 int iterator_next(iterator _it) {
